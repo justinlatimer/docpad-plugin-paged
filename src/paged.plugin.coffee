@@ -272,12 +272,12 @@ module.exports = (BasePlugin) ->
 					[1...numberOfPages].forEach (pageNumber) ->  addTask (complete) ->
 						# Prepare our new page
 						pageFilename = "index.#{extension}"
-+						pageOutFilename = "index.#{outExtension}"
-+						pagePath = path.join(pageNumber.toString(), pageFilename)
-+						if basename is 'index'
-+							pageRelativePath = path.join(path.dirname(relativePath), pagePath)
-+						else
-+							pageRelativePath = path.join(path.dirname(relativePath), basename, pagePath)
+						pageOutFilename = "index.#{outExtension}"
+						pagePath = path.join(pageNumber.toString(), pageFilename)
+						if basename is 'index'
+							pageRelativePath = path.join(path.dirname(relativePath), pagePath)
+						else
+							pageRelativePath = path.join(path.dirname(relativePath), basename, pagePath)
 
 						# Log
 						docpad.log('info', "Creating page #{pageNumber} for #{filePath} at #{pageRelativePath}")
