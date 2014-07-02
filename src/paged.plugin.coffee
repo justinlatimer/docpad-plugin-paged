@@ -2,6 +2,7 @@
 module.exports = (BasePlugin) ->
 	# Requires
 	{TaskGroup} = require('taskgroup')
+	path = require('path')
 
 	# Define Plugin
 	class PagedPlugin extends BasePlugin
